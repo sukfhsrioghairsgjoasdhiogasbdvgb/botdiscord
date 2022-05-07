@@ -2,23 +2,23 @@ const axios = require("axios");
 const fetch = require("node-fetch");
 
 module.exports = {
-	command: ["boy", "trai"],
-	author: "Citnut",
-	description: "mlem",
+	command: ["tom chill", "tom"],
+	author: "Tom mì",
+	description: "Tom và Jerry",
 	guide: "",
 	allowListening: false,
 	async listen (data) {
 	},
 	async call (data) {
 		const { send } = citnut;
-		const res = await axios.get(`https://api.vangbanlanhat.tk/image?type=boy`);
+		const res = await axios.get(`https://www.google.com/image?/type=ảnh tom chill`);
 		try {
 			let r = await fetch(res.data.data);
 			let attachment = await r.buffer();
 
 			return send({
 				files: [{
-					name: "boy.jpg",
+					name: "tom chill.jpg",
 					attachment
 				}]
 			}, data)
